@@ -1,0 +1,35 @@
+h1
+{
+    font-size: 30px;
+    color: red;
+    font-family: fantasy;
+}
+
+h2
+{
+    font-size: 15px;
+    color: yellow;
+    font-family: sans-serif;
+}
+
+p
+{
+    font-family: arial;
+    color: green;
+    font-size: 20px;
+    background: black;
+    
+    margin-right: 10em;
+    margin-left: 10em;
+    
+}
+
+code
+{
+    font-weight: bold;
+    background: blue;
+    color: white;
+    font-size: 10pt;
+    
+    margin-left:  20em;
+}
