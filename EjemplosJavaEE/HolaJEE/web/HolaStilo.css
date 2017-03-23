@@ -33,3 +33,19 @@ code
     
     margin-left:  20em;
 }
+
+menu
+{
+    background: gray;
+    margin-left: 20em;
+    margin-right: 20em;
+    
+}
+
+a
+{
+    margin-left: 2em;
+    margin-right: 2em;
+    color:red;
+    font-weight: bolder;
+}
