@@ -36,7 +36,7 @@ public class Prueba {
         contexto = contenedor.getContext();
         ejb1 = (EjbSesion) contexto.lookup("java:global/classes/EjbSesion!beans.EjbSesion");
         int c = ejb1.sumar(1, 4);
-        System.out.println(c);;
+        System.out.println(c);
     }
     
     
