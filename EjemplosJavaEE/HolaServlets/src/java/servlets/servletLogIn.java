@@ -3,8 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package servlets;
 
+import conexion.Conexion;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -12,7 +14,8 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.sql.*;
+
+
 
 
 /**
@@ -62,13 +65,22 @@ public class servletLogIn extends HttpServlet {
             throws ServletException, IOException {
        // processRequest(request, response);
         
-        String usuario = request.getParameter("usuario");
-        String contr  = request.getParameter("contras");
+        String usuario = request.getParameter("usr");
+        String contr  = request.getParameter("pwd");
         
         PrintWriter salida = response.getWriter();
         
-        salida.println("<h1>El usuario es "+ usuario);
-        salida.println("<h2>La password es "+ contr);
+        salida.println("<h1>Bienvenido</h1> <hr> <br>" +  "<h3>"+usuario+"</h3>");
+        salida.println("<h1>Su contraseña es:  "+ "<h3>"+contr +"</h3>");
+        
+        salida.println("<h4>El resto de usuarios es</h4>");
+        conexion.Conexion cn = new conexion.Conexion();
+        
+        
+        salida.println( "<p>"+ cn.conectar() +"</p>" );
+       
+        
+        
         
         
         
