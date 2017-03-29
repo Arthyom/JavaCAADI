@@ -56,8 +56,8 @@ public class servlet extends HttpServlet {
         String password = request.getParameter("txtPASSWORD");
         
         PrintWriter out = response.getWriter();
-        out.println("Usuario: "+usuario);
-        out.println("Contraseña: "+password);        
+        out.println("¡Hola "+usuario+", bienvenido!");
+        out.println("Tu contraseña es: "+password);
     }
 
     /**
