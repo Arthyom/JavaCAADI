@@ -71,7 +71,26 @@ public class servlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        String usuario = request.getParameter("txtUSER");
+        String password = request.getParameter("txtPASSWORD");
+
+        PrintWriter out = response.getWriter();
+        out.println("<!DOCTYPE html>");
+        out.println("<html>");
+        out.println("<head>");
+        out.println("<title>Pagina de bienvenida</title>");
+        out.println("<link rel=\"stylesheet\" href=\"into.css\">");
+        out.println("</head>");
+        out.println("<body>");
+        out.println("<div>");
+        out.println("<img src=\"escudo.png\" alt=\"Escudo UG\" width=\"221\" height=\"188\" title=\"Escudo de la Universidad de Guanajuato\" >");
+        out.println("<h3> ¡¡ Hola "+usuario+"</h3>");
+        out.println("<h3> bienvenido !! </h3>");
+        out.println("<h3> Tu contraseña es: "+password+"</h3>");
+        out.println("</div>");
+        out.println("</body>");
+        out.println("</html>");
+
     }
 
     /**
