@@ -1,14 +1,13 @@
 
 div{
-    font-family: Georgia, "Times New Roman",
-        Times, serif;
+    font-family: Georgia, "Times New Roman", Times, serif;
     color: goldenrod;
     background-color:white;
-        
+
     border: 2px solid #CCC;
     padding: 1em;
-    margin: 13em 0 1em 33.2em;
-    width: 240px;
+    margin: 13em 0 1em 28em;
+    width: 410px;
 }
 
 div img{
@@ -19,11 +18,17 @@ div img{
 
 div h3{
     position: relative;
-    left: 38px;
-    bottom: 8px;
+    left:2px;
     font-family: Helvetica, Geneva, Arial, SunSans-Regular, sans-serif;
 }
 
-div h5{
+div h2{
+    position: relative;
+    left: 2px;
+}
+
+div input{
+    position: relative;
+    left: 180px;
     font-family: Helvetica, Geneva, Arial, SunSans-Regular, sans-serif;
 }

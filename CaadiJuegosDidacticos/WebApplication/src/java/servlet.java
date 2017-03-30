@@ -79,18 +79,21 @@ public class servlet extends HttpServlet {
         out.println("<html>");
         out.println("<head>");
         out.println("<title>Pagina de bienvenida</title>");
-        out.println("<link rel=\"stylesheet\" href=\"into.css\">");
+        out.println("<link rel=\"stylesheet\" href=\"css/into.css\"> ");
         out.println("</head>");
         out.println("<body>");
         out.println("<div>");
         out.println("<img src=\"escudo.png\" alt=\"Escudo UG\" width=\"221\" height=\"188\" title=\"Escudo de la Universidad de Guanajuato\" >");
-        out.println("<h3> ¡¡ Hola "+usuario+"</h3>");
-        out.println("<h3> bienvenido !! </h3>");
-        out.println("<h3> Tu contraseña es: "+password+"</h3>");
+        out.println("<h2> ¡¡ HAZ ENTRADO AL SISTEMA !!</h2>");
+        out.println("<h3> Hola "+usuario+", bienvenido.  </h3>");
+        out.println("<h3> Tu contraseña es: </h3>");
+        out.println("<h3> "+password+"</h3>");
+        out.println("<form method=\"post\" action=\"index.html\">");
+        out.println("<h1><input type=\"submit\" value=\"Log out\" name=\"btnLOGOUT\" />");
+        out.println("</form>");
         out.println("</div>");
         out.println("</body>");
         out.println("</html>");
-
     }
 
     /**
