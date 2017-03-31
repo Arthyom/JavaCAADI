@@ -28,16 +28,16 @@ public class linkDB {
             if( connection != null ){
                 System.out.println("¡LA CONEXION SE HA REALIZADO CON EXITO!");
                 Statement queryStart = connection.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
-                ResultSet query = queryStart.executeQuery("SELECT *FROM players");
+                ResultSet query = queryStart.executeQuery("SELECT *FROM teams");
 
                 String out = "";
                 boolean next = query.next();
                 
                 while( next ){
-                    out = out + query.getString(2)+"\n";
+                    out += query.getString(1)+"\n";
                     next = query.next();
                 }
-
+                            
                 return out;
             }
 
@@ -46,4 +46,5 @@ public class linkDB {
         }
         return "¡ERROR!";
     }
+    
 }
