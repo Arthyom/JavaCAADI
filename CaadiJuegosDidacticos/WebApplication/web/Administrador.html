@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<html>
+
+    <head>
+
+        <title>Vista de Administradores</title>
+
+        <meta charset="UTF-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="Plantillas/Admin.css">
+
+	<SCRIPT LANGUAGE="JavaScript">
+		function mensajeCon(){
+			alert ("Aquí se consultan los datos, juegos, materias, estudiantes, sesiones, usuarios.");
+		}
+		function mensajeIns(){
+			alert ("Aquí se insertan los datos, juegos, materias, estudiantes, sesiones, usuarios.");
+		}
+		function mensajeMod(){
+			alert ("Aquí se modifican los datos, juegos, materias, estudiantes, sesiones, usuarios.");
+		}
+		function mensajeEli(){
+			alert ("Aquí se eliminan los datos, juegos, materias, estudiantes, sesiones, usuarios.");
+		}
+		function mensajeSol(){
+			alert ("Aquí se responden las solicitudes de juegos.");
+		}
+		function mensajeRep(){
+			alert ("Aquí se imprimen los reportes.");
+		}
+
+	</SCRIPT>
+    </head>
+
+
+    <body>
+
+
+        <div>
+
+           <img src="escudo.png" alt="Escudo UG" width="221" height="188" title="Escudo de la Universidad de Guanajuato">
+
+	   <form>
+          
+           	<h6> <input type="submit" value="Consultar" name="btnConsultar" onClick="mensajeCon()" />
+ </h6>
+	   </form>
+	   <form>
+          
+           	<h6> <input type="submit" value="Insertar" name="btnInsertar" onClick="mensajeIns()" />
+ </h6>
+	   </form>
+	   <form>
+          
+           	<h6> <input type="submit" value="Modificar" name="btnModificar" onClick="mensajeMod()" />
+ </h6>
+	   </form>
+	   <form>
+          
+           	<h6> <input type="submit" value="Eliminar" name="btnEliminar" onClick="mensajeEli()" />
+ </h6>
+	   </form>
+	   <form>
+          
+           	<h6> <input type="submit" value="Solicitudes" name="btnSolicitudes" onClick="mensajeSol()" />
+ </h6>
+	   </form>
+	   <form>
+          
+           	<h6> <input type=button value="Reportes" name="btnReportes" onClick="mensajeRep()" />
+ </h6>
+	   </form>
+        </div>
+
+    </body>
+
+</html>
