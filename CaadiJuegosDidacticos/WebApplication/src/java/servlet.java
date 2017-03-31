@@ -6,12 +6,18 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import conexion.linkDB;
+
 
 /**
  *
  * @author walter
  */
-@WebServlet(urlPatterns = {"/servlet"})
+@WebServlet(name = "servlet", urlPatterns = {"/servlet"})
 public class servlet extends HttpServlet {
 
     /**
@@ -86,10 +92,13 @@ public class servlet extends HttpServlet {
         out.println("<img src=\"escudo.png\" alt=\"Escudo UG\" width=\"221\" height=\"188\" title=\"Escudo de la Universidad de Guanajuato\" >");
         out.println("<h2> ¡¡ HAZ ENTRADO AL SISTEMA !!</h2>");
         out.println("<h3> Hola "+usuario+", bienvenido.  </h3>");
-        out.println("<h3> Tu contraseña es: </h3>");
-        out.println("<h3> "+password+"</h3>");
+        out.println("<h3> Tu contraseña es: "+password+"</h3>");
         out.println("<form method=\"post\" action=\"index.html\">");
         out.println("<h1><input type=\"submit\" value=\"Log out\" name=\"btnLOGOUT\" />");
+        out.println("<h5> PRIMER CONSULTA DE UNA BD EN MYSQL UTILIZANDO EL CONECTOR PARA JAVA </h5>");
+        out.println("<h5> RESULTADO DE LA CONSULTA: </h5>");
+        conexion.linkDB connection = new conexion.linkDB();
+        out.println("<p>"+connection.conect()+"</p>");
         out.println("</form>");
         out.println("</div>");
         out.println("</body>");
@@ -106,4 +115,5 @@ public class servlet extends HttpServlet {
         return "Short description";
     }// </editor-fold>
 
+    
 }
