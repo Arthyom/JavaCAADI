@@ -6,12 +6,21 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import conexion.linkDB;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 
 /**
  *
  * @author walter
  */
-@WebServlet(urlPatterns = {"/servlet"})
+@WebServlet(name = "servlet", urlPatterns = {"/servlet"})
 public class servlet extends HttpServlet {
 
     /**
@@ -56,8 +65,8 @@ public class servlet extends HttpServlet {
         String password = request.getParameter("txtPASSWORD");
         
         PrintWriter out = response.getWriter();
-        out.println("Usuario: "+usuario);
-        out.println("Contraseña: "+password);        
+        out.println("¡Hola "+usuario+", bienvenido!");
+        out.println("Tu contraseña es: "+password);
     }
 
     /**
@@ -71,7 +80,22 @@ public class servlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        String usuario = request.getParameter("txtUSER");
+        String password = request.getParameter("txtPASSWORD");
+
+        PrintWriter out = response.getWriter();
+        try {
+            boolean access;
+            access = searchUser(usuario,password);
+            
+            if( access ){
+                out.println("ACEPTADO");
+            }else
+                out.println("NO ACEPTADO");
+            
+        } catch (SQLException ex) {
+            Logger.getLogger(servlet.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     /**
@@ -83,5 +107,20 @@ public class servlet extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
-
+    
+    
+    public boolean searchUser(String user, String password) throws SQLException{
+         conexion.linkDB login = new conexion.linkDB();
+         String searchUser = login.searchUser(user, password);
+         boolean access = false;
+                 
+         if( searchUser != "ERROR" ){
+             if( searchUser == user && searchUser == password ){
+                access = true;
+             }else{
+                access = false;
+             }                    
+          }         
+         return access;
+    }
 }
