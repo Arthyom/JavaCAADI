@@ -8,12 +8,13 @@ html, body{
 }
 
 .banner{
-    height: 150px, width: 100%;
+    height: 250px, width: 100%;
     font-family: Helvetica, Geneva, Arial, SunSans-Regular, sans-serif;
     background-color: white;
     border-top: 1px solid #CCC;
     border-bottom: 5px solid #A0935F;
-    padding: 25px;
+    padding-top: 25px;
+    padding-bottom: 25px;
     margin-top: 12.299em;
 }
 
@@ -29,11 +30,11 @@ html, body{
     text-color: #A0935F;
     background-color: #f8f8f8;
     padding: 1em;
-    margin: 0em 0 10em 33.2em;
+    margin: 3em 0 3em 33.2em;
     width: 240px;
 
     border-top: 2px solid #A0935F;
-    border-bottom: 2px solid #A0935F;
+    border-bottom: 5px solid #A0935F;
     border-radius: 20px !important;
 }
 
@@ -46,7 +47,6 @@ div h3{
   text-decoration-color: black;
   background: #f8f8f8;
   border-bottom: 1px solid #e7e7e7;
-  padding-top: 20px;
+  padding-top: 10px;
   font-size: 11px !important;
 }
-    
