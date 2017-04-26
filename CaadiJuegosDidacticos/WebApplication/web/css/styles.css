@@ -1,63 +1,93 @@
-
-.row-border {
-    border-bottom: 1px solid #c3c3c3;
-    color: #9e955c;
-    font-size: 120%;
-    line-height: 10px;
-    margin-bottom: 10px;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    padding: 0;
-    text-align: center;
+html, body{
+    height: 100%;
+    background-color: #FFFFFF;
 }
 
-.navbar-UG {
-    background-color: #fff;
-    border-color: #fff;
-    border-bottom-color: #A0935F;
-    border-bottom-width: 5px;
-    border-bottom-left-radius: 0px !important;
-    border-bottom-right-radius: 0px !important;
+#main{
+    height: 100%;
 }
 
-.navbar-UG li a {
-        color: #7e7e7e !important;
-        font-size: medium !important;
-        border-right: 0.5px solid;
-        padding-bottom:10px;
-        padding-top:10px;
-    }
-    
-.pie {
-    background: #e5e5e5 none repeat scroll 0 0;
-    margin: 0px 0;
-    padding: 10px 0 0;
+hgroup{
+    height: 150px, width: 100%;
+    font-family: Helvetica, Arial, sans-serif;
+    background-color: white;
+    border-top: 1px solid #CCC;
+    border-bottom: 5px solid #A0935F;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    margin-top: 10.9em;
+}
+
+.imageBanner{
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 565px;
 }
 
 .formulario{
-    font-family: Georgia, "Times New Roman", Times, serif;
-    color: black;
-    background-color:lightgray;
-        
-    border: 2px solid #CCC;
+    font-family: Helvetica, Geneva, Arial, sans-serif;
+    color: #7E7E7E;
+    background-color: rgb(242, 242, 242);
     padding: 1em;
-    margin: 13em 0 1em 33.2em;
+    margin: 3em 0 0em 33.2em;
     width: 240px;
+    border-radius: 10px !important;
 }
 
-div img{
-    position: absolute;
-    top: 5px;
-    left: 560px;
+.txt1, .txt2{
+    margin-bottom: 8px;
+    color: black;
 }
 
-div h3{
-    position: relative;
-    left: 38px;
-    bottom: 8px;
-    font-family: Helvetica, Geneva, Arial, SunSans-Regular, sans-serif;
+.caadi{
+    margin-bottom: 10px;
+    margin-top: 5px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    color: black;
+    border-radius: 10px !important;
+    font-size: 40px !important;
+    font-family: Arial, Helvetica;
 }
 
-div h5{
-    font-family: Helvetica, Geneva, Arial, SunSans-Regular, sans-serif;
+.txtBox1, .txtBox2{
+    background-color: white;
+    border: 1px solid darkgray;
+    border-radius: 4px !important;
+    height: 25px;
+    width: 235px;
+    padding-top: 0px;
+}
+
+.boton{
+    background-color: #428bca;
+    color: white;
+    border: 1px solid #428bca;
+    border-radius: 5px !important;
+    height: 30px;
+    width: 235px; 
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+.boton:hover{
+    background-color: #3276b1;
+}
+
+.begin{ align-content: center; }
+
+footer{
+    width: 100%;
+    text-decoration-style: block;
+    background-color: rgb(229, 229, 229);
+    border-bottom: 1px solid #e7e7e7;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 11px !important;
+}
+
+.footerText{
+    color: black;
+    font-family: Helvetica, Arial, sans-serif;
 }
