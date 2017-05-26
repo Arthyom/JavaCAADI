@@ -1,16 +1,3 @@
-/*
- * Created on Sep 23, 2004
- *
- * TODO To change the template for this generated file go to
- * Window - Preferences - Java - Code Style - Code Templates
- */
-package com.mysql.jdbc;
-
-import java.sql.SQLException;
-
-class OperationNotSupportedException extends SQLException {
-	OperationNotSupportedException() {
-		super(
-				Messages.getString("RowDataDynamic.10"), SQLError.SQL_STATE_ILLEGAL_ARGUMENT); //$NON-NLS-1$
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:edc08f50e5d4479ad5ddcb85392d18faff392a2907bedb84679ccf30e478a1cc
+size 436

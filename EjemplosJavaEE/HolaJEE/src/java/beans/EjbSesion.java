@@ -1,22 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package beans;
-
-import javax.ejb.Stateless;
-
-/**
- *
- * @author frodo
- */
-@Stateless
-public class EjbSesion {
-
-    // Add business logic below. (Right-click in editor and choose
-    // "Insert Code > Add Business Method")
-    public int sumar (int a, int b){
-        return a+b;
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:015e4f46ed7b4cc2162ec3113aa67018aa8b1d3aa2af3b464b8e3271f549575c
+size 493
